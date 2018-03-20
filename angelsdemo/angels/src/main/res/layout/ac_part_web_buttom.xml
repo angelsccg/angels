@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/ac_ll_buttom">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey_line_ac"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@color/white_ac">
+
+        <ImageView
+            android:id="@+id/ac_iv_web_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ac_back_green"
+            android:padding="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/ac_selector_default_bg"/>
+
+        <ImageView
+            android:id="@+id/ac_iv_web_forward"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ac_forward_green"
+            android:padding="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/ac_selector_default_bg"/>
+        <ImageView
+            android:id="@+id/ac_iv_web_refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ac_refresh_green"
+            android:padding="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/ac_selector_default_bg"/>
+        <ImageView
+            android:id="@+id/ac_iv_web_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ac_share_green"
+            android:padding="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/ac_selector_default_bg"/>
+
+    </LinearLayout>
+
+</LinearLayout>

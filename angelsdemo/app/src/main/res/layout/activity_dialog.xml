@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <EditText android:text=""
+        android:id="@+id/etText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:editable="false"
+        android:cursorVisible="false" />
+    <Button android:text="显示普通对话框"
+        android:id="@+id/btnNormal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    <Button android:text="显示列表话框"
+        android:id="@+id/btnList"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    <Button android:text="显示单选按钮对话框"
+        android:id="@+id/btnRadio"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    <Button android:text="显示复选对话框"
+        android:id="@+id/btnCheckBox"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <Button android:text="对话框001"
+        android:id="@+id/btn001"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    <Button android:text="对话框加载对话框"
+        android:id="@+id/btn002"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    <Button android:text="对话框003"
+        android:id="@+id/btn003"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

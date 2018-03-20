@@ -1,0 +1,51 @@
+<com.angels.widget.stickynav.ACStickyNavLayout3
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@id/id_stickynavlayout_topview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#4400ff00">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:gravity="center"
+            android:text="软件介绍"
+            android:textSize="30sp"
+            android:textStyle="bold"/>
+
+    </RelativeLayout>
+
+    <com.angels.widget.stickynav.ACSimpleViewPagerIndicator3
+        android:id="@id/id_stickynavlayout_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#ffffffff">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="按钮按钮按钮"/>
+    </com.angels.widget.stickynav.ACSimpleViewPagerIndicator3>
+
+    <!--<android.support.v4.view.ViewPager
+        android:id="@id/id_stickynavlayout_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#44ff0000">
+    </android.support.v4.view.ViewPager>-->
+    <LinearLayout
+        android:id="@+id/id_stickynavlayout_buttomview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ListView
+            android:id="@+id/id_stickynavlayout_innerscrollview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+</com.angels.widget.stickynav.ACStickyNavLayout3>

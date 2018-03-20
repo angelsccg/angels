@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.angelsdemo"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="23" />
+    <!-- 访问互联网权限 根据需要添加 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- SDCARD读写权限 根据需要添加 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CODE_FOR_WRITE_PERMISSION"/>
+
+    <!-- 网络状态检测权限  根据需要添加 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <!-- zxing权限 -->
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <!--android:allowBackup="true"-->
+    <application
+        android:name="com.example.angelsdemo.MyApplication"
+        android:icon="@drawable/ic_launcher"
+        android:theme="@android:style/Theme.Black.NoTitleBar"
+        android:label="@string/app_name" >
+        <!--友盟-->
+        <meta-data android:value="59aca564677baa6820001d90" android:name="UMENG_APPKEY"/>
+        <meta-data android:value="97ed981afb18e7849f93603fb7767f6f" android:name="UMENG_MESSAGE_SECRET"/>
+        <!-- <meta-data android:value="xn" android:name="UMENG_CHANNEL"/>-->
+        <meta-data android:name="UMENG_CHANNEL" android:value="angelsdemo"/>
+        <activity
+            android:name="com.example.angelsdemo.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="ac"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.angelsdemo.activity.ControlActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name" />
+        <activity android:name="com.example.angelsdemo.activity.ToolsActivity" />
+        <activity android:name="com.example.angelsdemo.activity.TestActivity" />
+        <activity android:name="com.example.angelsdemo.activity.tool.TextJustfyActivity" />
+        <activity android:name="com.example.angelsdemo.activity.tool.EditJustfyActivity" />
+        <activity
+            android:name="com.example.angelsdemo.activity.control.RefreshAndLoadMoreActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.example.angelsdemo.activity.control.GuaguakaActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="ac"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.angelsdemo.activity.control.ImgScrollActivity" >
+        </activity>
+        <activity android:name="com.example.angelsdemo.activity.dialog.DialogActivity"
+            android:theme="@style/Dialog">
+        </activity>
+        <activity
+            android:name="com.example.angelsdemo.activity.control.SeldingFinishActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity android:name="com.example.angelsdemo.activity.control.DialogActivity" />
+        <activity android:name="com.example.angelsdemo.activity.AnimActivity" >
+        </activity>
+        <activity android:name="com.example.angelsdemo.activity.anim.ShakeActivity" >
+        </activity>
+        <activity android:name="com.example.angelsdemo.activity.AnotherActivity" />
+        <activity android:name="com.example.angelsdemo.activity.another.HtmlParseActivity" />
+        <activity android:name="com.example.angelsdemo.activity.HttpActivity" />
+        <activity android:name="com.example.angelsdemo.activity.http.GetAndPostActivity" />
+        <activity android:name="com.example.angelsdemo.activity.http.GPRSActivity" />
+        <activity android:name="com.example.angelsdemo.activity.JniActivity" />
+        <activity android:name="com.example.angelsdemo.activity.jni.UninstallActivity" />
+        <activity android:name="com.example.angelsdemo.activity.DrawActivity" />
+        <activity android:name="com.example.angelsdemo.activity.draw.JudgeLayerActivity" />
+        <activity android:name="com.example.angelsdemo.activity.draw.FillActivity" />
+        <activity android:name="com.example.angelsdemo.activity.control.MenuActivity" />
+        <activity android:name="com.example.angelsdemo.activity.control.SwipeRefreshLayoutRefresh" />
+
+        <activity android:name="com.example.angelsdemo.activity.DBActivity" />
+        <activity android:name="com.example.angelsdemo.activity.TabHostActivity"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity android:name="com.example.angelsdemo.activity.control.ImgScroll2Activity" />
+        <activity android:name="com.example.angelsdemo.activity.control.SwipeMenuListviewActivity" />
+        <activity android:name="com.example.angelsdemo.activity.OpenOtherAppActivity"/>
+        <activity android:name="com.example.angelsdemo.activity.QRCodeActivity"/>
+        <activity android:name="com.example.angelsdemo.activity.VideoActivity"/>
+        <activity android:name="com.example.angelsdemo.activity.CacheActivity"/>
+        <activity android:name="com.example.angelsdemo.activity.control.StickyNavActivity"/>
+        <activity android:name="com.example.angelsdemo.activity.control.StickyNavActivity3"/>
+        <activity android:name="com.example.angelsdemo.activity.control.StickyNavActivity4"/>
+        <activity android:name="com.example.angelsdemo.activity.control.RoundProgressActivity"/>
+        <activity android:name="com.example.angelsdemo.activity.control.VoiceActivity"/>
+        <activity android:name="com.example.angelsdemo.activity.control.Voice2Activity"/>
+        <activity android:name="com.example.angelsdemo.activity.control.Voice3Activity"/>
+        <activity android:name="com.example.angelsdemo.activity.control.HeartCameraActivity"/>
+        <activity android:name="com.example.angelsdemo.activity.control.AnnulusActivity"/>
+        <activity android:name="com.example.angelsdemo.activity.bluetooth.BluetoothGattActivity"/>
+        <activity android:name="com.example.angelsdemo.activity.BluetoothActivity"/>
+        <activity
+            android:name="com.angels.imageselector.imageloader.ImageSelectorActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <activity
+            android:name="com.example.angelsdemo.activity.control.ImageSelectorMainActivity" />
+        <activity
+            android:name="com.example.angelsdemo.activity.control.StatisticalchartActivity" />
+
+        <activity
+            android:name="com.zxing.activity.CaptureActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="stateAlwaysHidden">
+        </activity>
+        <!-- web -->
+        <activity android:name="com.angels.web.ui.ACWebActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="http" />
+                <data android:scheme="ac"></data>
+            </intent-filter>
+        </activity>
+
+        <service android:name="com.example.angelsdemo.service.DialogService" />
+
+
+
+        <!--===========================血压============================-->
+        <activity
+            android:name="com.urionapp.bp.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.urionapp.bp.OneActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.urionapp.bp.TwoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.urionapp.bp.ThreadActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.urionapp.bp.OneoneActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+
+        <activity
+            android:name="com.urionapp.bp.ZhuceActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+
+        </activity>
+        <activity
+            android:name="com.urionapp.bp.DeviceListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/select_device"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <service android:name="com.example.urionservice.BluetoothLeService" >
+        </service>
+    </application>
+
+</manifest>

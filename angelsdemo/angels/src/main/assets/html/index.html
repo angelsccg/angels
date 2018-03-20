@@ -1,0 +1,41 @@
+<html>
+<head>
+    <title>测试阶段</title>
+    <script type="text/javascript">
+function updateHtml(){
+	 document.getElementById("content").innerHTML =
+         "你通过 android 中的控件调用了html 中js 的方法";
+	alert("dialog");
+}
+
+</script>
+</head>
+<body>
+
+<input type="button" value="吐司1" onClick="Angels.showToast('Hello Android!')" />
+<input type="button" value="吐司2" onClick="javascript:window.Angels.showToast('Hello Android!2');" />
+
+<!--<a  href="javascript:window.Toast.showToast('toast')">2333333333</a>-->
+<br/>
+
+<br/>
+<input type="button" value="关闭1" onClick="javascript:window.close();" />
+
+<br/>
+<input type="button" value="弹窗" onClick="alert('弹窗')" />
+<br/>
+
+<a  href="https://www.baidu.com/">百度</a><br/>
+<a  href="sms:18259067360">短信</a><br/>
+<a  href="tel:18259067360">电话</a><br/>
+<a href="wtai://wp/mc;18259067360">打电话：18259067360</a><br/>
+<a  href="http://mbsapi.273.com.cn/download/273_web_v4.1.0.apk">下载apk</a><br/>
+<a  href="http://skycnxz2.wy119.com//4/2106jsjscb_sky.zip">下载文件</a><br/><br/><br/>
+<input type="button" value="隐藏标题" onClick="Angels.swtichTitle(false)" /><br/><br/>
+<input type="button" value="显示标题" onClick="Angels.swtichTitle(true)" /><br/><br/><br/>
+
+<br/>
+<a  href="https://www.baiduccg.com/">错误百度</a><br/>
+<input type="button" value="刷新" onClick="window.location.reload()" /><br/><br/><br/>
+</body>
+</html>

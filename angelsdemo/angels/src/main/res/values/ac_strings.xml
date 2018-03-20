@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="ac_start_date">开始日期</string>
+    <string name="ac_end_date">结束日期</string>
+    <string name="ac_ok">确定</string>
+    <string name="ac_cancel">取消</string>
+    <string name="ac_default">未定义值</string>
+	<!-- 刷新和加载  -->
+    <string name="ac_pull_to_refresh">下拉刷新</string>
+    <string name="ac_release_to_refresh">释放立即刷新</string>
+    <string name="ac_refreshing">正在刷新...</string>
+    <string name="ac_refresh_succeed">刷新成功</string>
+    <string name="ac_refresh_fail">刷新失败</string>
+    <string name="ac_pullup_to_load">上拉加载更多</string>
+    <string name="ac_release_to_load">释放立即加载</string>
+    <string name="ac_loading">正在加载...</string>
+    <string name="ac_load_succeed">加载成功</string>
+    <string name="ac_load_fail">加载失败</string>
+</resources>

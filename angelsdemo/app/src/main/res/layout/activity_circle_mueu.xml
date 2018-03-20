@@ -1,0 +1,26 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+	<Button 
+	     android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0001"/>
+    <com.angels.widget.ACGooeyMenu
+        android:id="@+id/gooey_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:fab_radius="40dp"
+        app:gap_between_menu_fab="80dp"
+        app:menu_radius="20dp"
+        app:no_of_menu="5"
+        app:menu_drawable="@array/drawable_array"
+        app:menu_bg_color="@color/navy"
+        android:layout_alignParentBottom="true"/>
+<Button 
+	     android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0002"
+        android:layout_alignParentRight="true"/>
+</RelativeLayout>

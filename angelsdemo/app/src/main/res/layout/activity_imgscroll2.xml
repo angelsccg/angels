@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+	<!-- 配置container和pager的clipChildren=false， 并且指定marginLeft 和 marginRight 的值-->
+	<LinearLayout
+		android:id="@+id/container"
+		android:layout_width="match_parent"
+		android:layout_height="100dp"
+		android:clipChildren="false"
+		android:gravity="center_horizontal"
+		android:layerType="software"
+		android:orientation="horizontal" >
+
+		<android.support.v4.view.ViewPager
+			android:id="@+id/viewpager"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_marginLeft="130dp"
+			android:layout_marginRight="130dp"
+			android:clipChildren="false" >
+		</android.support.v4.view.ViewPager>
+	</LinearLayout>
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="2dp"
+		android:background="#ffbd2021" />
+
+	<TextView
+		android:id="@+id/title"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center"
+		android:gravity="center_horizontal"
+		android:scaleType="fitXY"
+		android:src="@drawable/ic_launcher"
+		android:text="baidu"
+		android:textSize="18sp" />
+
+</LinearLayout>

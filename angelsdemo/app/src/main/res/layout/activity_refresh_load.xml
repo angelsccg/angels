@@ -1,0 +1,24 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.angels.widget.pullableview.PullToRefreshLayout
+        android:id="@+id/refresh_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+      <!--   <include layout="@layout/ac_refresh_head" /> -->
+        <!-- 支持所有实现Pullable接口的View -->
+
+        <com.angels.widget.pullableview.PullableListView
+            android:id="@+id/content_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white_ac"
+            android:divider="@color/gray_ac"
+            android:dividerHeight="1dp" />
+
+       <!--  <include layout="@layout/ac_load_more" /> -->
+    </com.angels.widget.pullableview.PullToRefreshLayout>
+
+</RelativeLayout>

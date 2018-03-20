@@ -1,0 +1,10 @@
+1,四大组件：activity,service,content Provider内容提供者，广播。
+2，activity生命周期： onCreate，onStart，onResume，onPause，onStop，onDestory,onRestart
+3，activity启动模式：standard,singTask,singTop,singleInstance
+4,service服务： Started 和 Bound
+    StartedService与BoundService区别：StartedService不予Activity生命周期绑定，StartedService会多次调用onStartCommand()而BoundService不会重复调用onBound()
+5，IntentService 异步线程服务
+6，Fragment生命周期
+7，ContentProvider：Shared Preferences、网络存储、文件存储、外储存储、SQLite
+
+8，xml的三种解析 SAX  DOM   Pull
