@@ -15,8 +15,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.angels.widget.VoiceLineView;
-import com.example.angelsdemo.AudioRecordDemo;
-import com.example.angelsdemo.AudioRecordManager;
+import com.example.angelsdemo.utils.AudioRecordDemo;
 import com.example.angelsdemo.R;
 import com.example.angelsdemo.AudioProcess;
 import com.example.angelsdemo.activity.BaseActivity;
@@ -95,8 +94,10 @@ public class Voice2Activity extends BaseActivity implements Runnable {
     protected void onDestroy() {
 //        JSON.stringify
         isAlive = false;
-        mMediaRecorder.release();
-        mMediaRecorder = null;
+        if(mMediaRecorder != null){
+            mMediaRecorder.release();
+            mMediaRecorder = null;
+        }
         super.onDestroy();
 
         android.os.Process.killProcess(android.os.Process.myPid());

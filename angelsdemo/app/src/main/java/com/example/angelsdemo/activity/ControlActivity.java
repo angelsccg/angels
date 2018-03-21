@@ -4,13 +4,12 @@ import java.util.Calendar;
 import java.util.Iterator;
 import java.util.Map;
 
-import com.angels.imageselector.imageloader.ImageSelectorActivity;
 import com.angels.model.ACRecordMap;
+import com.angels.util.ACToast;
 import com.angels.web.ui.ACWebActivity;
 import com.angels.web.util.ACWeb;
 import com.angels.widget.ACDoubleDatePickerDialog;
 import com.angels.util.ACToastUtils;
-import com.example.angelsdemo.MainActivity;
 import com.example.angelsdemo.R;
 import com.example.angelsdemo.activity.control.AnnulusActivity;
 import com.example.angelsdemo.activity.control.DialogActivity;
@@ -30,17 +29,14 @@ import com.example.angelsdemo.activity.control.StickyNavActivity4;
 import com.example.angelsdemo.activity.control.SwipeMenuListviewActivity;
 import com.example.angelsdemo.activity.control.SwipeRefreshLayoutRefresh;
 import com.example.angelsdemo.activity.control.Voice2Activity;
-import com.example.angelsdemo.activity.control.Voice3Activity;
 import com.example.angelsdemo.activity.control.VoiceActivity;
 import com.example.angelsdemo.service.DialogService;
 
-import android.Manifest;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v4.app.ActivityCompat;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -199,8 +195,7 @@ public class ControlActivity extends BaseActivity implements OnClickListener{
 			break;
 			case 19:
 			{
-				Intent intent = new Intent(this, Voice3Activity.class);
-				startActivity(intent);
+				ACToast.showShort(this,"已经删除");
 			}
 			break;
 			case 20:

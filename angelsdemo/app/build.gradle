@@ -31,7 +31,6 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile project(':angels')
     compile project(':imageselector')
-    compile project(':PushSDK')
     compile 'me.leolin:ShortcutBadger:1.1.18@aar'
     compile files('libs/achartengine-1.0.0.jar')
 }

@@ -35,7 +35,7 @@
     <!--android:allowBackup="true"-->
     <application
         android:name="com.example.angelsdemo.MyApplication"
-        android:icon="@drawable/ic_launcher"
+        android:icon="@drawable/ac_ic_angels_launcher"
         android:theme="@android:style/Theme.Black.NoTitleBar"
         android:label="@string/app_name" >
         <!--友盟-->
@@ -121,7 +121,6 @@
         <activity android:name="com.example.angelsdemo.activity.control.RoundProgressActivity"/>
         <activity android:name="com.example.angelsdemo.activity.control.VoiceActivity"/>
         <activity android:name="com.example.angelsdemo.activity.control.Voice2Activity"/>
-        <activity android:name="com.example.angelsdemo.activity.control.Voice3Activity"/>
         <activity android:name="com.example.angelsdemo.activity.control.HeartCameraActivity"/>
         <activity android:name="com.example.angelsdemo.activity.control.AnnulusActivity"/>
         <activity android:name="com.example.angelsdemo.activity.bluetooth.BluetoothGattActivity"/>

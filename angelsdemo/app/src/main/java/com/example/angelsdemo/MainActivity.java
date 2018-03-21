@@ -291,33 +291,6 @@ public class MainActivity extends BaseActivity implements OnClickListener{
 			break;
 			case 14://测试的
 			{
-//				toActivity();
-                Toast.makeText(this, "血压", Toast.LENGTH_SHORT).show();
-				Intent startIntent = new Intent(this, com.urionapp.bp.MainActivity.class);
-				startActivity(startIntent);
-//				Intent startIntent = new Intent(this, DialogService.class);
-//				startService(startIntent);
-//				Intent intent = new Intent(this, TestActivity.class);
-//				startActivity(intent);
-				//===============
-//				this.updateNotificationManager = (NotificationManager)getSystemService(NOTIFICATION_SERVICE);
-//				this.updateNotification = new Notification();
-//				//设置通知栏显示内容
-//				updateNotification.icon = R.drawable.ic_launcher;
-////				updateNotification.setLatestEventInfo(this, "正在下载", i++, updatePendingIntent);
-//				updateNotificationManager.notify(0, updateNotification);
-				//==================
-//				try {
-//					Intent i = new Intent(Intent.ACTION_VIEW);
-//					i.setData(Uri.parse("market://details?id="+getPackageName()));
-//					startActivity(i);
-//				} catch (Exception e) {
-//					Toast.makeText(this, "您的手机上没有安装Android应用市场", Toast.LENGTH_SHORT).show();
-//					e.printStackTrace();
-//				}
-//				HashMap<String,String> map = new HashMap<String,String>();
-//				map.put(ACWebActivity.WEBVIEW_TYPE,"horizontal_no_all");
-//				ACWeb.showWeb(this,"file:///android_asset/love/index.html",map,0);
 			}
 			break;
 		default:

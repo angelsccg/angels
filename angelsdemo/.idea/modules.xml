@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/PushSDK/PushSDK.iml" filepath="$PROJECT_DIR$/PushSDK/PushSDK.iml" />
       <module fileurl="file://$PROJECT_DIR$/angels/angels.iml" filepath="$PROJECT_DIR$/angels/angels.iml" />
       <module fileurl="file://$PROJECT_DIR$/angelsdemo.iml" filepath="$PROJECT_DIR$/angelsdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
