@@ -34,7 +34,6 @@ public class PinChart extends View {
     private int centerY;
     int valueX;
     int valueY;
-
     public static float[] humidity = { 110, 60, 50, 50, 40, 30, 10, 10 };
     private String str[] = { "数据24%", "数据19%", "数据21%", "其他18%", "数据3%",
             "数据3%", "数据4%", "数据6%" };

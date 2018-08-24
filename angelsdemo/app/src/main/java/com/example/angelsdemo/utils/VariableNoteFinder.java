@@ -1,4 +1,4 @@
-package com.example.angelsdemo;
+package com.example.angelsdemo.utils;
 
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
@@ -8,7 +8,7 @@ public class VariableNoteFinder {
 	int freqArrayLength = 100;
 	
 	String[][] freqArray = new String[freqArrayLength+1][2];
-	
+
 	String[] notes = {
 			"G#/Ab",
 			"A",

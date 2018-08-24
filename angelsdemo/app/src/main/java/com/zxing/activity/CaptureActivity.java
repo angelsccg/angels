@@ -86,7 +86,6 @@ public class CaptureActivity extends Activity implements Callback {
 		
 		//quit the scan view
 		cancelScanButton.setOnClickListener(new OnClickListener() {
-			
 			@Override
 			public void onClick(View v) {
 				CaptureActivity.this.finish();
@@ -107,6 +106,7 @@ public class CaptureActivity extends Activity implements Callback {
 	@Override
 	protected void onDestroy() {
 		inactivityTimer.shutdown();
+		ha.removeCallbacks(runnable);
 		super.onDestroy();
 	}
 	
@@ -130,8 +130,19 @@ public class CaptureActivity extends Activity implements Callback {
 			resultIntent.putExtras(bundle);
 			this.setResult(RESULT_OK, resultIntent);
 		}
-		CaptureActivity.this.finish();
+		Toast.makeText(CaptureActivity.this, resultString, Toast.LENGTH_SHORT).show();
+//		inactivityTimer.shutdown();
+//		CaptureActivity.this.finish();
+		ha.postDelayed(runnable,5000);
 	}
+
+	private Runnable runnable = new Runnable() {
+		@Override
+		public void run() {
+			handler.requestPreviewFrame();
+		}
+	};
+	private Handler ha = new Handler();
 	
 	private void initCamera(SurfaceHolder surfaceHolder) {
 		try {

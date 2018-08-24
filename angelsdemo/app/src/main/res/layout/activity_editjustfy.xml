@@ -8,6 +8,7 @@
         android:id="@+id/editText1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:inputType="number|numberDecimal"
         android:ems="10" >
 
     </EditText>
@@ -15,6 +16,7 @@
         android:id="@+id/editText2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+         android:inputType="number|numberDecimal"
         android:ems="10" >
 
     </EditText>

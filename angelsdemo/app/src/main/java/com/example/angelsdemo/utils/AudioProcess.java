@@ -1,4 +1,4 @@
-package com.example.angelsdemo;
+package com.example.angelsdemo.utils;
 
 import java.util.ArrayList;
 import java.lang.Short;
@@ -13,8 +13,6 @@ import android.graphics.Rect;
 import android.media.AudioRecord;
 import android.util.Log;
 import android.view.SurfaceView;
-
-import com.example.angelsdemo.Complex;
 
 public class AudioProcess {
     public static final float pi= (float) 3.1415926;
@@ -158,8 +156,6 @@ public class AudioProcess {
         /**
          * 绘制指定区域
          *
-         * @param start
-         *            X 轴开始的位置(全屏)
          * @param buffer
          *             缓冲区
          * @param rate

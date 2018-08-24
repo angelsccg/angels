@@ -5,26 +5,19 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin">
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/white">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:id="@+id/llContent" >
-        <com.angels.widget.ACCircleImageView
-            android:id="@+id/circle"
-            android:layout_width="60dp"
-            android:layout_height="60dp" />
-        <ImageView
-            android:id="@+id/circle2"
-            android:layout_width="60dp"
-            android:layout_height="60dp" />
-        <com.angels.widget.RadarView
+        android:id="@+id/llContent">
+        <!--<com.angels.widget.RadarView
             android:id="@+id/rv"
             android:layout_width="600px"
             android:layout_height="600px"
-            android:layout_centerInParent="true" />
+            android:layout_centerInParent="true" />-->
         <TextView
             android:id="@+id/textView1"
             android:layout_width="wrap_content"

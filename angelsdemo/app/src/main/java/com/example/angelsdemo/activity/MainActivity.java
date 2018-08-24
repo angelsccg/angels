@@ -1,27 +1,9 @@
-package com.example.angelsdemo;
+package com.example.angelsdemo.activity;
 
-import com.angels.imageselector.imageloader.ImageSelectorActivity;
 import com.angels.util.ACToastUtils;
-import com.angels.widget.ACCircleImageView;
-import com.angels.widget.RadarView;
 import com.example.angelsdemo.R.drawable;
 import com.example.angelsdemo.R.id;
 import com.example.angelsdemo.R.layout;
-import com.example.angelsdemo.activity.AnimActivity;
-import com.example.angelsdemo.activity.AnotherActivity;
-import com.example.angelsdemo.activity.BaseActivity;
-import com.example.angelsdemo.activity.CacheActivity;
-import com.example.angelsdemo.activity.ControlActivity;
-import com.example.angelsdemo.activity.DBActivity;
-import com.example.angelsdemo.activity.DrawActivity;
-import com.example.angelsdemo.activity.HttpActivity;
-import com.example.angelsdemo.activity.JniActivity;
-import com.example.angelsdemo.activity.OpenOtherAppActivity;
-import com.example.angelsdemo.activity.QRCodeActivity;
-import com.example.angelsdemo.activity.TabHostActivity;
-import com.example.angelsdemo.activity.TestActivity;
-import com.example.angelsdemo.activity.ToolsActivity;
-import com.example.angelsdemo.activity.VideoActivity;
 import com.example.angelsdemo.activity.bluetooth.BluetoothGattActivity;
 import com.example.angelsdemo.service.DialogService;
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
@@ -31,14 +13,14 @@ import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu.OnOpenedListener;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.drawable.Drawable;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -49,18 +31,14 @@ import org.apache.http.HttpStatus;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
 
-import java.io.BufferedInputStream;
-import java.io.BufferedOutputStream;
-import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
-import java.net.URL;
 
 import me.leolin.shortcutbadger.ShortcutBadger;
 
 
 public class MainActivity extends BaseActivity implements OnClickListener{
 
-	public static final String[] btnNames= {"控件","工具","动画","第三方架包","http","jni","绘图","数据库","TabHost","打开第三方应用","二维码(包含一维码)","视频","缓存","蓝牙","测试的"};
+	public static final String[] btnNames= {"控件","工具","动画","第三方架包","http","jni","绘图","数据库","TabHost","打开第三方应用","二维码(包含一维码)","视频","缓存","蓝牙","桌面开发","测试的"};
 	public static final Button[] btns = new Button[btnNames.length];
 	
 	private LinearLayout llContent;
@@ -69,18 +47,11 @@ public class MainActivity extends BaseActivity implements OnClickListener{
         super.onCreate(savedInstanceState);
         setContentView(layout.activity_mainc);
 
-//		ACCircleImageView circleImageView = (ACCircleImageView) findViewById(id.circle);
-//		ImageView imageView = (ImageView) findViewById(id.circle);
-//		Bitmap bitmap = getImageBitmap("http://up.qqjia.com/z/24/tu29253_9.jpg");
-//		circleImageView.setImageBitmap(bitmap);
-//		imageView.setImageBitmap(bitmap);
 
-
-
-        RadarView mRadarView = (RadarView) findViewById(R.id.rv);
-        mRadarView.setSearching(true);
-        mRadarView.addPoint();
-        mRadarView.addPoint();
+//        RadarView mRadarView = (RadarView) findViewById(R.id.rv);
+//        mRadarView.setSearching(true);
+//        mRadarView.addPoint();
+//        mRadarView.addPoint();
 
 
 
@@ -89,8 +60,13 @@ public class MainActivity extends BaseActivity implements OnClickListener{
         for (int i = 0; i < btnNames.length; i++) {
 			Button button = new Button(this);
 			button.setText(btnNames[i]);
+			button.setTextColor(Color.parseColor("#ffffff"));
 			button.setId(i);
 			button.setOnClickListener(this);
+			button.setBackgroundResource(drawable.blue_button);
+			LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.WRAP_CONTENT);
+			params.setMargins(10,10,10,10);
+            button.setLayoutParams(params);
 			llContent.addView(button);
 			btns[i] = button;
 		}
@@ -127,7 +103,6 @@ public class MainActivity extends BaseActivity implements OnClickListener{
 		} finally {
 			httpclient.getConnectionManager().shutdown();
 		}
-
 		return null;
 	}
     private void initIntentData(){
@@ -174,7 +149,7 @@ public class MainActivity extends BaseActivity implements OnClickListener{
 	     menu.setBehindOffset(200);  
 	     // 菜单的宽度
 //	     menu.setBehindWidth(getResources().getDimensionPixelSize(200));
-	     menu.setBehindWidth(400);
+	     menu.setBehindWidth(600);
 	     // 把SlidingMenu附加在Activity上
 	     // SlidingMenu.SLIDING_WINDOW:菜单拉开后高度是全屏的
 	     // SlidingMenu.SLIDING_CONTENT:菜单拉开后高度是不包含Title/ActionBar的内容区域
@@ -285,11 +260,17 @@ public class MainActivity extends BaseActivity implements OnClickListener{
 			break;
 			case 13:
 			{
-				Intent intent = new Intent(this, BluetoothGattActivity.class);
+				Intent intent = new Intent(this, BluetoothActivity.class);
 				startActivity(intent);
 			}
 			break;
-			case 14://测试的
+			case 14://桌面开发
+			{
+				Intent intent = new Intent(this, DesktopActivity.class);
+				startActivity(intent);
+			}
+			break;
+			case 15://测试的
 			{
 			}
 			break;

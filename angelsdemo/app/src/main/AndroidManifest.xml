@@ -32,9 +32,11 @@
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
     <!--android:allowBackup="true"-->
     <application
-        android:name="com.example.angelsdemo.MyApplication"
+        android:name="com.example.angelsdemo.app.MyApplication"
         android:icon="@drawable/ac_ic_angels_launcher"
         android:theme="@android:style/Theme.Black.NoTitleBar"
         android:label="@string/app_name" >
@@ -44,7 +46,7 @@
         <!-- <meta-data android:value="xn" android:name="UMENG_CHANNEL"/>-->
         <meta-data android:name="UMENG_CHANNEL" android:value="angelsdemo"/>
         <activity
-            android:name="com.example.angelsdemo.MainActivity"
+            android:name="com.example.angelsdemo.activity.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -66,6 +68,8 @@
         <activity android:name="com.example.angelsdemo.activity.TestActivity" />
         <activity android:name="com.example.angelsdemo.activity.tool.TextJustfyActivity" />
         <activity android:name="com.example.angelsdemo.activity.tool.EditJustfyActivity" />
+        <activity android:name="com.example.angelsdemo.activity.tool.TouchActivity"/>
+
         <activity
             android:name="com.example.angelsdemo.activity.control.RefreshAndLoadMoreActivity"
             android:label="@string/app_name" />
@@ -91,8 +95,8 @@
         <activity android:name="com.example.angelsdemo.activity.control.DialogActivity" />
         <activity android:name="com.example.angelsdemo.activity.AnimActivity" >
         </activity>
-        <activity android:name="com.example.angelsdemo.activity.anim.ShakeActivity" >
-        </activity>
+        <activity android:name="com.example.angelsdemo.activity.anim.ShakeActivity" />
+        <activity android:name="com.example.angelsdemo.activity.anim.WaveActivity" />
         <activity android:name="com.example.angelsdemo.activity.AnotherActivity" />
         <activity android:name="com.example.angelsdemo.activity.another.HtmlParseActivity" />
         <activity android:name="com.example.angelsdemo.activity.HttpActivity" />
@@ -120,11 +124,14 @@
         <activity android:name="com.example.angelsdemo.activity.control.StickyNavActivity4"/>
         <activity android:name="com.example.angelsdemo.activity.control.RoundProgressActivity"/>
         <activity android:name="com.example.angelsdemo.activity.control.VoiceActivity"/>
-        <activity android:name="com.example.angelsdemo.activity.control.Voice2Activity"/>
-        <activity android:name="com.example.angelsdemo.activity.control.HeartCameraActivity"/>
-        <activity android:name="com.example.angelsdemo.activity.control.AnnulusActivity"/>
         <activity android:name="com.example.angelsdemo.activity.bluetooth.BluetoothGattActivity"/>
+        <activity android:name="com.example.angelsdemo.activity.bluetooth.BluetoothDeviceActivity" />
+        <activity android:name="com.example.angelsdemo.activity.voice.WordToVoiceActivity" />
         <activity android:name="com.example.angelsdemo.activity.BluetoothActivity"/>
+
+        <activity android:name="com.example.angelsdemo.activity.DesktopActivity"/>
+        <activity android:name="com.example.angelsdemo.activity.desktop.XfDesktopActivity"/>
+
         <activity
             android:name="com.angels.imageselector.imageloader.ImageSelectorActivity"
             android:configChanges="keyboardHidden|orientation"
@@ -157,50 +164,9 @@
         </activity>
 
         <service android:name="com.example.angelsdemo.service.DialogService" />
+        <service android:name="com.example.angelsdemo.service.FloatWindowService" />
 
 
-
-        <!--===========================血压============================-->
-        <activity
-            android:name="com.urionapp.bp.MainActivity"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait"
-            android:launchMode="singleTask"
-            android:theme="@android:style/Theme.NoTitleBar" >
-        </activity>
-        <activity
-            android:name="com.urionapp.bp.OneActivity"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.NoTitleBar" >
-        </activity>
-        <activity
-            android:name="com.urionapp.bp.TwoActivity"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.NoTitleBar" />
-        <activity
-            android:name="com.urionapp.bp.ThreadActivity"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.NoTitleBar" />
-        <activity
-            android:name="com.urionapp.bp.OneoneActivity"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.NoTitleBar" >
-        </activity>
-
-        <activity
-            android:name="com.urionapp.bp.ZhuceActivity"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.NoTitleBar" >
-
-        </activity>
-        <activity
-            android:name="com.urionapp.bp.DeviceListActivity"
-            android:configChanges="orientation|keyboardHidden"
-            android:label="@string/select_device"
-            android:theme="@android:style/Theme.Dialog" />
-
-        <service android:name="com.example.urionservice.BluetoothLeService" >
-        </service>
     </application>
 
 </manifest>

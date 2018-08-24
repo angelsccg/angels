@@ -185,6 +185,7 @@ public final class CameraManager {
    * @param message The what field of the message to be sent.
    */
   public void requestPreviewFrame(Handler handler, int message) {
+    Log.d(TAG, "扫一扫-->5-->zz" + message + "--previewing:" + previewing);
     if (camera != null && previewing) {
       previewCallback.setHandler(handler, message);
       if (useOneShotPreviewCallback) {

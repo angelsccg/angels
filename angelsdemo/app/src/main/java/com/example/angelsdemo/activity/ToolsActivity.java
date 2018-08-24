@@ -11,6 +11,7 @@ import com.example.angelsdemo.activity.control.ImgScrollActivity;
 import com.example.angelsdemo.activity.control.RefreshAndLoadMoreActivity;
 import com.example.angelsdemo.activity.tool.EditJustfyActivity;
 import com.example.angelsdemo.activity.tool.TextJustfyActivity;
+import com.example.angelsdemo.activity.tool.TouchActivity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -23,7 +24,7 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 public class ToolsActivity extends BaseActivity implements OnClickListener{
-	public static final String[] btnNames= {"使textview内容两边对齐(未完成)","控制editText输入的位数"};
+	public static final String[] btnNames= {"使textview内容两边对齐(未完成)","控制editText输入的位数","点击屏幕获取坐标"};
 	public static final Button[] btns = new Button[btnNames.length];
 	
 	private LinearLayout llContent;
@@ -61,6 +62,8 @@ public class ToolsActivity extends BaseActivity implements OnClickListener{
 			break;
 		case 2:
 		{
+			Intent intent = new Intent(this, TouchActivity.class);
+			startActivity(intent);
 		}
 			break;
 		case 3:

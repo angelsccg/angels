@@ -7,6 +7,7 @@ import com.example.angelsdemo.R;
 import com.example.angelsdemo.R.id;
 import com.example.angelsdemo.R.layout;
 import com.example.angelsdemo.activity.anim.ShakeActivity;
+import com.example.angelsdemo.activity.anim.WaveActivity;
 import com.example.angelsdemo.activity.control.GuaguakaActivity;
 import com.example.angelsdemo.activity.control.ImgScrollActivity;
 import com.example.angelsdemo.activity.control.RefreshAndLoadMoreActivity;
@@ -24,7 +25,7 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 public class AnimActivity extends BaseActivity implements OnClickListener{
-	public static final String[] btnNames= {"抖动动画"};
+	public static final String[] btnNames= {"抖动动画","波浪动画"};
 	public static final Button[] btns = new Button[btnNames.length];
 	
 	private LinearLayout llContent;
@@ -55,7 +56,9 @@ public class AnimActivity extends BaseActivity implements OnClickListener{
 		}
 			break;
 		case 1:
-		{	
+		{
+			Intent intent = new Intent(this, WaveActivity.class);
+			startActivity(intent);
 		}
 			break;
 		case 2:

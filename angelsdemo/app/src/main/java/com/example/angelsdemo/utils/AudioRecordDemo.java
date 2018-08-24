@@ -5,15 +5,10 @@ import android.media.AudioManager;
 import android.media.AudioRecord;
 import android.media.AudioTrack;
 import android.media.MediaRecorder;
-import android.media.audiofx.Visualizer;
 import android.os.AsyncTask;
-import android.os.Bundle;
 import android.os.Environment;
 import android.util.Log;
-import android.widget.FrameLayout;
 import android.widget.TextView;
-
-import com.example.angelsdemo.BytesTransUtils;
 
 import java.io.BufferedInputStream;
 import java.io.DataInputStream;

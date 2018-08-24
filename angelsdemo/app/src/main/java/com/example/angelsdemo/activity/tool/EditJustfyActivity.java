@@ -18,7 +18,9 @@ public class EditJustfyActivity extends BaseActivity{
 		setContentView(R.layout.activity_editjustfy);
 		t1 = (EditText) findViewById(R.id.editText1);
 		t2 = (EditText) findViewById(R.id.editText2);
-		
+
+		t1.setHint("整数两位，小数三位");
+		t2.setHint("整数三位，小数两位");
 		ACViewTextCondition.digit(t1, 2, 3);
 		ACViewTextCondition.digit(t2, 3, 2);
 	}

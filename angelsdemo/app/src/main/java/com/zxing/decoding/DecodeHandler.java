@@ -51,9 +51,10 @@ final class DecodeHandler extends Handler {
 	@Override
 	public void handleMessage(Message message) {
 		if (message.what == R.id.decode) {
-			//Log.d(TAG, "Got decode message");
+			Log.d(TAG, "扫一扫-->handleMessage-->Got decode message");
 			decode((byte[]) message.obj, message.arg1, message.arg2);
-		}else if (message.what == R.id.quit) {
+		}
+		else if (message.what == R.id.quit) {
 			Looper.myLooper().quit();
 		}
 	}
@@ -82,17 +83,24 @@ final class DecodeHandler extends Handler {
 
 		PlanarYUVLuminanceSource source = CameraManager.get().buildLuminanceSource(rotatedData, width, height);
 		BinaryBitmap bitmap = new BinaryBitmap(new HybridBinarizer(source));
+//		if(true){
+//			return;
+//		}
 		try {
+			Log.d(TAG, "扫一扫-->5->00");
 			rawResult = multiFormatReader.decodeWithState(bitmap);
+			Log.d(TAG, "扫一扫-->5->01");
 		} catch (ReaderException re) {
 			// continue
+			Log.d(TAG, "扫一扫-->5->02"+re.getMessage());
 		} finally {
+			Log.d(TAG, "扫一扫-->5->03");
 			multiFormatReader.reset();
 		}
 
 		if (rawResult != null) {
 			long end = System.currentTimeMillis();
-			Log.d(TAG, "Found barcode (" + (end - start) + " ms):\n" + rawResult.toString());
+			Log.d(TAG, "扫一扫-->5->04-->Found barcode (" + (end - start) + " ms):\n" + rawResult.toString());
 			Message message = Message.obtain(activity.getHandler(), R.id.decode_succeeded, rawResult);
 			Bundle bundle = new Bundle();
 			bundle.putParcelable(DecodeThread.BARCODE_BITMAP, source.renderCroppedGreyscaleBitmap());

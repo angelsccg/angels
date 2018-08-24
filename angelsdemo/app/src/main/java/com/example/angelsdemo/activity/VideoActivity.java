@@ -20,6 +20,7 @@ import com.example.angelsdemo.activity.control.RefreshAndLoadMoreActivity;
 import com.example.angelsdemo.activity.control.SeldingFinishActivity;
 import com.example.angelsdemo.activity.control.SwipeMenuListviewActivity;
 import com.example.angelsdemo.activity.control.SwipeRefreshLayoutRefresh;
+import com.example.angelsdemo.activity.voice.WordToVoiceActivity;
 
 import java.io.File;
 
@@ -31,7 +32,7 @@ import java.io.File;
  */
 
 public class VideoActivity extends BaseActivity implements View.OnClickListener{
-    public static final String[] btnNames= {"系统自带的播放器 ","系统自动音频播放器","VideoView来实现","MediaPlayer"};
+    public static final String[] btnNames= {"系统自带的播放器 ","文字转语音","打开设置 默认语音设置"};
     public static final Button[] btns = new Button[btnNames.length];
     private LinearLayout llContent;
     @Override
@@ -72,11 +73,13 @@ public class VideoActivity extends BaseActivity implements View.OnClickListener{
 //                Intent it = new Intent(Intent.ACTION_VIEW);
 //                it.setDataAndType(Uri.parse("file://" + Environment.getExternalStorageDirectory() + "/a.MP3"), "audio/MP3");
 //                startActivity(it);
+                Intent intent1 = new Intent(this, WordToVoiceActivity.class);
+                startActivity(intent1);
             }
             break;
             case 2:
             {
-
+                startActivity(new Intent("com.android.settings.TTS_SETTINGS"));
             }
             break;
             default:

@@ -23,3 +23,8 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+
+#-libraryjars libs/locSDK_3.3.jar
+#-libraryjars libs/armeabi/libBaiduMapSDK_v3_1_1.so
+#-libraryjars libs/armeabi/liblocSDK3.so

@@ -1,12 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion '26.0.1'
+    compileSdkVersion 26
+    buildToolsVersion "26.0.2"
     defaultConfig {
         applicationId "com.example.angelsdemo"
-        minSdkVersion 14
-        targetSdkVersion 25
+        minSdkVersion 18
+        targetSdkVersion 26
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -21,16 +21,31 @@ android {
     }
 }
 
+repositories {
+    flatDir {
+        dirs 'libs' //this way we can find the .aar file in libs folder
+    }
+}
+
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.android.support:appcompat-v7:25.3.1'
+    //    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:appcompat-v7:26.+'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     testCompile 'junit:junit:4.12'
     compile project(':angels')
     compile project(':imageselector')
     compile 'me.leolin:ShortcutBadger:1.1.18@aar'
-    compile files('libs/achartengine-1.0.0.jar')
+    //    compile 'com.github.angelsccg:angels_test:v1.0'
+    //    compile 'com.github.angelsccg.angels_test:PushSDK:v1.0'
+    //        compile 'com.github.angelsccg:angels_test:v2.0.0'
+    //友盟统计
+    //    compile 'com.umeng.analytics:analytics:latest.integration'
+    //    implementation 'com.yanzhenjie:permission:2.0.0-rc4'
+    //    implementation 'com.yanzhenjie:permission:2.0.0-rc4'
+    compile 'com.yanzhenjie:permission:1.1.2'
+
 }

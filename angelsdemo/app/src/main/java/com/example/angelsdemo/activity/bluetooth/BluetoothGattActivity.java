@@ -53,7 +53,7 @@ import static android.bluetooth.le.ScanSettings.MATCH_MODE_STICKY;
 import static android.bluetooth.le.ScanSettings.SCAN_MODE_LOW_LATENCY;
 
 public class BluetoothGattActivity extends BaseActivity implements View.OnClickListener {
-    private String deviceName = "Bioland-BGM";
+    private String deviceName = "BLUFI_DEVICE";
     /**
      * 已配对蓝牙设备
      */
@@ -106,10 +106,10 @@ public class BluetoothGattActivity extends BaseActivity implements View.OnClickL
                     Log.i("BluetoothGattActivity", "蓝牙-->ACTION_DISCOVERY_FINISHED-->蓝牙扫描过程结束");
                     break;
                 case BluetoothDevice.ACTION_BOND_STATE_CHANGED:
-//                    BluetoothDevice deviceBong = intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
+//                    BluetoothDeviceActivity deviceBong = intent.getParcelableExtra(BluetoothDeviceActivity.EXTRA_DEVICE);
 //                    if (deviceBong != null && BluetoothGattActivity.this.device != null && deviceBong.getAddress().equals(BluetoothGattActivity.this.device.getAddress())) {
-//                        int bondState = intent.getIntExtra(BluetoothDevice.EXTRA_BOND_STATE, BluetoothDevice.BOND_NONE);
-//                        if (bondState == BluetoothDevice.BOND_BONDED) {
+//                        int bondState = intent.getIntExtra(BluetoothDeviceActivity.EXTRA_BOND_STATE, BluetoothDeviceActivity.BOND_NONE);
+//                        if (bondState == BluetoothDeviceActivity.BOND_BONDED) {
 //                            handleDeviceBonded();
 //                        }
 //                    }
@@ -200,8 +200,8 @@ public class BluetoothGattActivity extends BaseActivity implements View.OnClickL
 
         // 设置广播信息过滤
         IntentFilter intentFilter = new IntentFilter();
-//        intentFilter.addAction(BluetoothDevice.ACTION_FOUND);
-//        intentFilter.addAction(BluetoothDevice.ACTION_BOND_STATE_CHANGED);
+//        intentFilter.addAction(BluetoothDeviceActivity.ACTION_FOUND);
+//        intentFilter.addAction(BluetoothDeviceActivity.ACTION_BOND_STATE_CHANGED);
 //        intentFilter.addAction(BluetoothAdapter.ACTION_SCAN_MODE_CHANGED);
 //        intentFilter.addAction(BluetoothAdapter.ACTION_STATE_CHANGED);
         intentFilter.addAction(BluetoothDevice.ACTION_FOUND);
@@ -587,7 +587,7 @@ public class BluetoothGattActivity extends BaseActivity implements View.OnClickL
 
 
     // 选中发送数据的蓝牙设备，全局变量，否则连接在方法执行完就结束了
-//    private BluetoothDevice selectDevice;
+//    private BluetoothDeviceActivity selectDevice;
 
     /**
      * 数据交互的服务
@@ -1119,7 +1119,7 @@ public class BluetoothGattActivity extends BaseActivity implements View.OnClickL
         //如果想要取消已经配对的设备，只需要将creatBond改为removeBond
 //        Method method = null;
 //        try {
-//            method =BluetoothDevice.class.getMethod("createBond");
+//            method =BluetoothDeviceActivity.class.getMethod("createBond");
 //            Log.e(getPackageName(), "蓝牙-->开始配对");
 //            method.invoke(device);
 //        } catch (NoSuchMethodException e) {
@@ -1131,7 +1131,7 @@ public class BluetoothGattActivity extends BaseActivity implements View.OnClickL
 //        }
 
 //        this.address = device.getAddress();
-//        final BluetoothDevice device = mBluetoothAdapter.getRemoteDevice(address);
+//        final BluetoothDeviceActivity device = mBluetoothAdapter.getRemoteDevice(address);
 //        if(isCreateBond){
 //
 //        }else{

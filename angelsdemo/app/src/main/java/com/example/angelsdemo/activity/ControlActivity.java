@@ -5,16 +5,13 @@ import java.util.Iterator;
 import java.util.Map;
 
 import com.angels.model.ACRecordMap;
-import com.angels.util.ACToast;
 import com.angels.web.ui.ACWebActivity;
 import com.angels.web.util.ACWeb;
 import com.angels.widget.ACDoubleDatePickerDialog;
 import com.angels.util.ACToastUtils;
 import com.example.angelsdemo.R;
-import com.example.angelsdemo.activity.control.AnnulusActivity;
 import com.example.angelsdemo.activity.control.DialogActivity;
 import com.example.angelsdemo.activity.control.GuaguakaActivity;
-import com.example.angelsdemo.activity.control.HeartCameraActivity;
 import com.example.angelsdemo.activity.control.ImageSelectorMainActivity;
 import com.example.angelsdemo.activity.control.ImgScroll2Activity;
 import com.example.angelsdemo.activity.control.ImgScrollActivity;
@@ -28,7 +25,6 @@ import com.example.angelsdemo.activity.control.StickyNavActivity3;
 import com.example.angelsdemo.activity.control.StickyNavActivity4;
 import com.example.angelsdemo.activity.control.SwipeMenuListviewActivity;
 import com.example.angelsdemo.activity.control.SwipeRefreshLayoutRefresh;
-import com.example.angelsdemo.activity.control.Voice2Activity;
 import com.example.angelsdemo.activity.control.VoiceActivity;
 import com.example.angelsdemo.service.DialogService;
 
@@ -47,7 +43,7 @@ import android.widget.Toast;
 
 public class ControlActivity extends BaseActivity implements OnClickListener{
 	public static final int REQUEST_CODE = 1001;
-	public static final String[] btnNames= {"双日期选择","刮刮卡","下拉刷新和上拉加载","滚动图片展示","左滑关闭界面","网页","半圆形菜单","对话框","下拉刷新和上拉加载2","多个图片水平滚动","listview 右滑动删除","图片选择器","滑动置顶1","滑动置顶3","统计图","滑动置顶4","圆形进度条","声波","声波2","声波3频率","摄像头检测心率","圆环"};
+	public static final String[] btnNames= {"双日期选择","刮刮卡","下拉刷新和上拉加载","滚动图片展示","左滑关闭界面","网页","半圆形菜单","对话框","下拉刷新和上拉加载2","多个图片水平滚动","listview 右滑动删除","图片选择器","滑动置顶1","滑动置顶3","统计图","滑动置顶4","圆形进度条","声波","声波2"};
 	public static final Button[] btns = new Button[btnNames.length];
 	private LinearLayout llContent;
     @Override
@@ -174,42 +170,8 @@ public class ControlActivity extends BaseActivity implements OnClickListener{
 			break;
 			case 17:
 			{
-//                ActivityCompat.requestPermissions(this,
-//					new String[]{Manifest.permission.RECORD_AUDIO},
-//					MY_PERMISSIONS_REQUEST_VOICE);
-//				ActivityCompat.requestPermissions(this,
-//						new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
-//						MY_PERMISSIONS_REQUEST_READ_CONTACTS);
-
-
-//                ACToastUtils.showMessage(this,"23333");
 				Intent intent = new Intent(this, VoiceActivity.class);
 				startActivity(intent);
-			}
-			break;
-			case 18:
-			{
-				Intent intent = new Intent(this, Voice2Activity.class);
-				startActivity(intent);
-			}
-			break;
-			case 19:
-			{
-				ACToast.showShort(this,"已经删除");
-			}
-			break;
-			case 20:
-			{
-				Intent intent = new Intent(this, HeartCameraActivity.class);
-				startActivity(intent);
-//				toActivity();
-			}
-			break;
-			case 21:
-			{
-				Intent intent = new Intent(this, AnnulusActivity.class);
-				startActivity(intent);
-//				toActivity();
 			}
 			break;
 			default:
@@ -217,6 +179,7 @@ public class ControlActivity extends BaseActivity implements OnClickListener{
 		}
 	}
 	private Handler handler;
+
 	public void toActivity(){
 		handler = new Handler();
 		handler.postDelayed(new Runnable() {
